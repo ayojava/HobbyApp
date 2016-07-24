@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Hobby Form</title>
+    </h:head>
+    <h:body>
+        <h:form id="hobbyForm">
+            <p:growl id="growl" showSummary="true" sticky="true" />  
+            <p:panelGrid columns="2">
+                
+                <h:outputLabel for="name" value="Name" />  
+                <h:inputText value="#{hobbyHandler.userHobby.name}"  id="name"/>  
+                
+                <h:outputLabel for="hobby" value="Hobby:" />  
+                <h:inputText value="#{hobbyHandler.userHobby.hobby}"  id="hobby"/>  
+                
+                <p:spacer width="40"/>
+                <h:commandButton value="Submit" action="#{hobbyHandler.saveHobby}" />  
+            </p:panelGrid>           
+        </h:form>
+    </h:body>
+</html>
